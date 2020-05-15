@@ -1,0 +1,65 @@
+[
+  {
+    "model": "icecreamapp.VarietyFlavor",
+    "pk": 1,
+    "fields": {
+      "variety_id": 1,
+      "flavor_id": 1,
+      "toppings": "Walnuts, corn flakes, fruit"
+  }
+  },
+  {
+    "model": "icecreamapp.VarietyFlavor",
+    "pk": 2,
+    "fields": {
+      "variety_id": 1,
+      "flavor_id": 2,
+      "toppings": "Saffron, pistachios, brown sugar"
+  }
+  },
+  {
+    "model": "icecreamapp.VarietyFlavor",
+    "pk": 3,
+    "fields": {
+      "variety_id": 1,
+      "flavor_id": 3,
+      "toppings": "Sprinkles, gumdrops"
+    }
+  },
+  {
+    "model": "icecreamapp.VarietyFlavor",
+    "pk": 4,
+    "fields": {
+      "variety_id": 2,
+      "flavor_id": 1,
+      "toppings": "Hot fudge, caramel"
+    }
+  },
+  {
+    "model": "icecreamapp.VarietyFlavor",
+    "pk": 5,
+    "fields": {
+      "variety_id": 2,
+      "flavor_id": 3,
+      "toppings": "Whipped cream, candied pecans"
+    }
+  },
+  {
+    "model": "icecreamapp.VarietyFlavor",
+    "pk": 6,
+    "fields": {
+      "variety_id": 3,
+      "flavor_id": 3,
+      "toppings": "Cookies"
+    }
+  },
+  {
+    "model": "icecreamapp.VarietyFlavor",
+    "pk": 7,
+    "fields": {
+      "variety_id": 3,
+      "flavor_id": 2,
+      "toppings": "Fresh fruit, brandy sauce"
+    }
+  }
+]

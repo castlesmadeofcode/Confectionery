@@ -1,0 +1,42 @@
+[
+  {
+    "model": "icecreamapp.Flavor",
+    "pk": 1,
+    "fields": {
+      "name": "Rose",
+      "alcohol_percent": 1
+    }
+  },
+  {
+    "model": "icecreamapp.Flavor",
+    "pk": 2,
+    "fields": {
+      "name": "Vanilla",
+      "alcohol_percent": 0
+    }
+  },
+  {
+    "model": "icecreamapp.Flavor",
+    "pk": 3,
+    "fields": {
+      "name": "Chocolate",
+      "alcohol_percent": 2
+    }
+  },
+  {
+    "model": "icecreamapp.Flavor",
+    "pk": 4,
+    "fields": {
+      "name": "Red bean",
+      "alcohol_percent": 0
+    }
+  },
+  {
+    "model": "icecreamapp.Flavor",
+    "pk": 5,
+    "fields": {
+      "name": "Mango",
+      "alcohol_percent": 0
+    }
+  }
+]

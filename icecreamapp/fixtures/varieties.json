@@ -1,0 +1,26 @@
+[
+  {
+    "model": "icecreamapp.Variety",
+    "pk": 1,
+    "fields": {
+      "name": "Gelato",
+      "country_of_origin": "Italy"
+    }
+  },
+  {
+    "model": "icecreamapp.Variety",
+    "pk": 2,
+    "fields": {
+      "name": "Patbingsu",
+      "country_of_origin": "Korea"
+    }
+  },
+  {
+    "model": "icecreamapp.Variety",
+    "pk": 3,
+    "fields": {
+      "name": "Kulfi",
+      "country_of_origin": "India"
+    }
+  }
+]
