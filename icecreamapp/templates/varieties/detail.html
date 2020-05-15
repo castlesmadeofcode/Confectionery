@@ -1,0 +1,34 @@
+{% extends 'shared/base.html' %}
+    {% block content %}
+    <div>Name: {{ variety.name }}</div>
+    <div>Country of origin: {{ variety.country_of_origin}}</div>
+    <div>Flavors:</div>
+         <ul>
+                {% for flavor in variety_flavor %}
+                <li>
+                    {{flavor.name}}
+                </li>
+                {% endfor %}     
+          </ul>
+
+    <div>Toppings:</div>
+         <ul>
+                {% for topping in variety_flavor %}
+                <li>
+                    {{topping.toppings}}
+                </li>
+                {% endfor %}     
+          </ul>
+
+
+    <form action="{% url 'icecreamapp:variety' variety.id %}" method="POST">
+    {% csrf_token %}
+    <input type="hidden" name="actual_method" value="DELETE">
+    <button>Delete</button>
+</form>
+
+ <form action="{% url 'icecreamapp:variety_edit_form' variety.id %}" method="GET">
+            {% csrf_token %}
+            <button>Edit</button>
+        </form>
+{% endblock %}
