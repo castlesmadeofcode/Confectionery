@@ -8,7 +8,7 @@ from .details import get_variety
 from .details import get_variety_country
 
 
-def get_varieties(variet_id):
+def get_varieties():
     with sqlite3.connect(Connection.db_path) as conn:
         conn.row_factory = model_factory(Variety)
         db_cursor = conn.cursor()

@@ -96,6 +96,8 @@ def variety_details(request, variety_id):
 
             return redirect(reverse('icecreamapp:varieties'))
 
+# NEED TO REFACTOR DELETE METHOD
+
     if request.method == 'POST':
         form_data = request.POST
 

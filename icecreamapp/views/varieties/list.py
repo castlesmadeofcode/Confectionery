@@ -16,7 +16,8 @@ def variety_list(request):
             v.id,
             v.name,
             v.country_of_origin  
-            from icecreamapp_variety v
+            FROM icecreamapp_variety v
+            ORDER BY "name"
             """)
 
             all_varieties = []
