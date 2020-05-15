@@ -7,6 +7,11 @@
                 {% for flavor in variety_flavor %}
                 <li>
                     {{flavor.name}}
+                    <form action="{% url 'icecreamapp:variety' variety.id %}" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" name="actual_method" value="DELETE">
+                    <button>Delete</button>
+                    </form>
                 </li>
                 {% endfor %}     
           </ul>
@@ -21,11 +26,7 @@
           </ul>
 
 
-    <form action="{% url 'icecreamapp:variety' variety.id %}" method="POST">
-    {% csrf_token %}
-    <input type="hidden" name="actual_method" value="DELETE">
-    <button>Delete</button>
-</form>
+
 
  <form action="{% url 'icecreamapp:variety_edit_form' variety.id %}" method="GET">
             {% csrf_token %}

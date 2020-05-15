@@ -94,7 +94,7 @@ def variety_details(request, variety_id):
                 db_cursor = conn.cursor()
 
                 db_cursor.execute("""
-                DELETE FROM icecreamapp_variety
+                DELETE FROM icecreamapp_varietyflavor
                 WHERE id = ?
                 """, (variety_id,))
 
