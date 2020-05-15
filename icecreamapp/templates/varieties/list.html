@@ -1,0 +1,16 @@
+{% extends 'shared/base.html' %}
+
+{% block content %}
+    <h1>Varieties</h1>
+   <a href="{% url 'icecreamapp:variety_form' %}">Add New Variety</a>
+    <ol>
+    {% for variety in all_varieties %}
+
+        <li>
+            <a href="{% url 'icecreamapp:variety' variety.id%}"> {{variety.name}} </a>
+            <p>Name: {{variety.name}}</p>
+            <p>Country of origin: {{variety.country_of_origin}}</p>
+        </li>
+    {% endfor %}
+    </ol>
+{% endblock content %}
