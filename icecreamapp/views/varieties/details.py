@@ -22,6 +22,20 @@ def get_variety(variety_id):
 
         return db_cursor.fetchone()
         
+def get_variety_country(variety_id):
+    with sqlite3.connect(Connection.db_path) as conn:
+        conn.row_factory = model_factory(Variety)
+        db_cursor = conn.cursor()
+
+        db_cursor.execute("""
+        SELECT
+            v.id,
+            v.country_of_origin
+        FROM icecreamapp_variety v
+        WHERE v.id = ?
+        """, (variety_id,))
+
+        return db_cursor.fetchone()
 
 def get_variety_flavor(variety_id): 
     with sqlite3.connect(Connection.db_path) as conn:
@@ -71,13 +85,12 @@ def variety_details(request, variety_id):
 
                 db_cursor.execute("""
                 UPDATE icecreamapp_variety
-                SET name = ?,
-                    country_of_origin = ?
+                SET country_of_origin = ?
 
                 WHERE id = ?
                 """,
                 (
-                    form_data['name'], form_data['country_of_origin'],
+                    form_data['country_of_origin'],
                     variety_id,
                 ))
 

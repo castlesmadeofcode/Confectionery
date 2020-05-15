@@ -5,6 +5,7 @@ from icecreamapp.models import Variety
 from icecreamapp.models import model_factory
 from ..connection import Connection
 from .details import get_variety
+from .details import get_variety_country
 
 
 def get_varieties(variet_id):
@@ -37,9 +38,9 @@ def variety_form(request):
 def variety_edit_form(request, variety_id):
 
     if request.method == 'GET':
-        variety = get_variety(variety_id)
+        variety = get_variety_country(variety_id)
 
-        template = 'varieties/form.html'
+        template = 'varieties/editform.html'
         context = {
             'variety': variety,
         }
