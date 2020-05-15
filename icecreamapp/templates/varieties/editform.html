@@ -1,20 +1,16 @@
 {% extends 'shared/base.html' %}
     {% block content %}
     <h1>New Variety</h1>
-
-    <form action="{% url 'icecreamapp:varieties' %}" method="post">
+      <form action="{% url 'icecreamapp:variety' variety.id %}" method="post">
  
       {% csrf_token %}
-      <fieldset>
-          <label for="name">Name: </label>
-          <input id="name" type="text" name="name" value="{{ variety.name }}">
-      </fieldset>
       <fieldset>
           <label for="country_of_origin">Country of origin: </label>
           <input id="country_of_origin" type="text" name="country_of_origin" value="{{ variety.country_of_origin }}">
       </fieldset>
 
-          <input type="submit" value="Create" />
+          <input type="hidden" name="actual_method" value="PUT">
+          <input type="submit" value="Update" />
 
       </form>
 {% endblock %}
